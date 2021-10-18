@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CP.css" />
+    <title>Cell Podium</title>
+</head>
+
+<body onload="includeHTML();">
+    <div w3-include-html="../headerlight.html"></div>
+
+    <div class="sectionp">
+        <h1>Subscribe To Sensor Simulator</h1>
+        <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+        <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+        <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+        <form name="contactform" method="post" class="form-inline" action="/php/send_buy_email.php">
+            <div class="row" style="padding:0px">
+                <div class="col-md-5 col-lg-5" style="margin-top:30px;margin-bottom:30px; border-right:solid 1px lightgray">
+                    Interested in our Sensor Simulator? Fill out the subscription form, and we will quickly get back to you to configure beacons to your training requirements, or help you to configure the beacons yourself.
+                    <br /><br />
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Individual Traininer</td>
+                                <td>Training Organizations</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Cost per Beacon per Year (Minimum of 3 beacons)
+                                </td>
+                                <td>$150</td>
+                                <td>$300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Individual Trainer</h4>
+                    Individual trainers receive beacons pre-configured to their requirements.
+                    <br /><br />
+                    <h4>Training Organization</h4>
+
+                    Training Organizations have access to a web application with which they can
+                    <ol>
+                        <li>change the configuration of any of their beacons at any time, even during an exercise,</li>
+                        <li>see the simulated HAZMAT sensor readings of any participant in his/her training exercise, and</li>
+                        <li>track trainee activity and performance.</li>
+                    </ol>
+
+
+                </div>
+                <div class="col-md-7 col-lg-7">
+                    <div style="padding-right:20px">
+                        <br />
+                        <h4>Subscription Form</h4>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Email Address</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" placeholder="Email Address" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Phone Number</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Address</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" placeholder="Address" id="address" name="address" required data-validation-required-message="Please enter your address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Usage</label>
+                            <div class="radio"><label><input type="radio" id="usage" name="usage" value="teacher" onclick="calc();"> Individual Trainer ($100/beacon/year)</label></div>
+                            <div class="radio"><label><input type="radio" id="usage" name="usage" value="consultant" checked onclick="calc();"> Training Organization ($200/beacon/year)</label></div>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Number of Beacons</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select class="form-control" id="beaconno" name="beaconno" required data-validation-required-message="Please select the number of beacons." onchange="calc();">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Yearly Cost</label>
+                            </div>
+                            <div class="col-md-9">
+                                <label id="yearlycost">$ 900</label>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="sendMessageButton" name="sendMessageButton">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div w3-include-html="../footer.html"></div>
+    </div>
+    <script>
+        function calc() {
+            var cbUsage = document.getElementById('usage');
+            var noBeacons = document.getElementById('beaconno');
+            var lbyearlycost = document.getElementById('yearlycost');
+            var notext = noBeacons.options[noBeacons.selectedIndex].text;
+            var unitPrice = cbUsage.checked ? 150.0 : 300.0;
+            var totalPrice = unitPrice * notext * 1;
+            var tctext = "$ " + totalPrice;
+            lbyearlycost.innerHTML = tctext;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../cp.js"></script>
+</body>
+
+</html>

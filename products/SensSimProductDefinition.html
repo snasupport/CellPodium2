@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CP.css" />
+    <title>Cell Podium</title>
+</head>
+
+<body onload="includeHTML();">
+    <div w3-include-html="../headerlight.html"></div>
+
+    <div class="sectionp">
+        <h1 style="padding-top:50px">Hazard Material Sensor Simulator </h1>
+        <div class="row">
+            <div class="col-md-2" style="vertical-align:bottom;whitespace:nowrap;">
+                <a href="buysenssim.shtml" class="btn btn-primary" alt="subscribe">Subscribe Here</a>
+            </div>
+        </div>
+        <div style="color:midnightblue;padding-bottom:20px;font-size:x-large">
+            Your training will be realistic!
+        </div>
+    </div>
+    <div class="sectionp">
+        <!--  Hazmat -------------------------------------------------->
+        <div class="row">
+            <div class="col-md-4">
+                The Hazard Materiel Sensor Simulator consists out of 4 components:
+                <ul>
+                    <li>Beacons</li>
+                    <li>Sensor Simulator</li>
+                    <li>Web Application with Database</li>
+                    <li>Teacher Monitor System</li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <img src="/img/CPSensorSimOverview.jpg" alt="Overview" style="width:100%" />
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md-2">
+                <img class="mobileScreenShot" src="/img/Beacon.png" alt="Standard" />
+            </div>
+            <div class="col-md-10">
+                <h4>Beacons</h4>
+                Beacons are small bricks that are Bluetooth enables. They are placed in a training session on or next to any simulated chemical spill. An application on a mobile phone can detect whether it is close to one or several beacons and depending on the settings
+                shows an alarm.
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Sensor Simulator</h4>
+                Cell Podium’s Augmented Reality HAZMAT Sensor Simulator is an application that runs on an Android device or iPhone. The application surveys its surroundings and detects nearby beacons. Using location sensing and configuration data from all the beacons,
+                the app then calculates in real-time the simulated chemical and radiological sensor reading. If simulated exposure exceeds a threshold, the app sounds an alarm. The app currently simulates three different handheld devices:
+                <ul>
+                    <li>Standard (four sensor)</li>
+                    <li>MultiRAE (five Sensor)</li>
+                    <li>QRAE 3 (four Sensor)</li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <img class="mobileScreenShot" src="/img/Sim_Standard.png" alt="Standard" />
+            </div>
+            <div class="col-md-2">
+                <img class="mobileScreenShot" src="/img/Sim_Multirae.png" alt="Multirae" />
+            </div>
+            <div class="col-md-2">
+                <img class="mobileScreenShot" src="/img/Sim_Qrae.png" alt="Qrae" />
+            </div>
+        </div>
+        <br><br />
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/img/Hazmat_App.png" width="90%" alt="App" />
+            </div>
+            <div class="col-md-8">
+                <h4>Web application and Database</h4>
+                Each beacon is assigned to a customer, and is configured to emulate one or several of the hazard attributes listed below. Cell Podium ships beacons pre-configured to the requirements of the customer. Customers with a training organization license can
+                re-configure their beacons at any time, including during an exercise.
+                <ul>
+                    <li>LEL (Lower Explosive Level with unit %LEL)</li>
+                    <li>PID (Photo Ionization Detector)</li>
+                    <li>OXY (Oxygen level %) Default value without any beacons is 20.9</li>
+                    <li>CO (Carbon Monoxide with unit ppm)</li>
+                    <li>RAD (Radiation with unit mRem)</li>
+                    <li>H2S (Hydrogen sulfide unit ppm)</li>
+                    <li>COO (Carbon Dioxide with unit ppm)</li>
+                </ul>
+                These settings are preconfigured upon delivery of the beacons. If you have the school package, a teacher can change the settings even during an exercise.
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Teacher Monitor</h4>
+                If you have teach rights in the Sensor Simulator Application, you can see the readings of every student as they approach any of the beacons. You can see, which student is so close, that their application is raising an alarm. From their phone a teacher
+                can change the settings of the beacons during an exercise.
+            </div>
+            <div class="col-md-6">
+                <img src="/img/HazmatSensorSImRange.png" height="300px" alt="App" />
+            </div>
+        </div>
+        <br /><br />
+        <h4>How to use the system:</h4>
+        In its preconfigured state the system can be used by just placing the beacons next to your spills.<br /> Start the simulator application. The download is free under google or apple store, search for Hazard Sensor Simulator.<br /> The student approaching
+        the beacon with a running application will get a reading and eventually an alarm.<br />
+        <br /><br /> If you opted for the school package, you should go before an exercise into the application and review and set your beacons according to the spills. If the settings have not changed from the last exercise, there is no need for this
+        step.
+        <br /> During the exercise, you as a teacher can enter the “Teacher Dashboard” from the menu. It asked you for username and password, which are the same as the web access name and password. You can see now the readings of phones that are close
+        to any beacons and are running the application.
+        <br /> In addition you can change on the setting of every beacon. For example, you can suddenly “create” a spill by switching on a beacon that did not have any alarm settings before.
+
+    </div>
+
+    <div w3-include-html="../footer.html"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../cp.js"></script>
+</body>
+
+</html>

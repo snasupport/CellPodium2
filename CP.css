@@ -1,0 +1,296 @@
+﻿/* General Settings **************************************************************/
+
+body {
+    /* margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px; */
+}
+
+h11 {
+    font-size: 40px;
+    font-family: Roboto-Light, sans-serif;
+    line-height: 53px;
+}
+
+h21 {
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+
+h31 {
+    font-size: 18px;
+    font-family: Roboto-Regular, sans-serif;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.blog {
+    font-size: 18px;
+    font-family: Roboto-medium, sans-serif;
+    line-height: 23px;
+    display: block;
+    color: #305777
+}
+
+.blog-title {
+    font-size: 18px;
+    font-family: Roboto-medium, sans-serif;
+    line-height: 23px;
+    font-weight: bold;
+    display: block;
+    color: #305777
+}
+
+.button {
+    font-size: 14px;
+    font-family: Roboto;
+    line-height: 19px;
+}
+
+.button-link {
+    font-size: 14px;
+    font-family: Roboto-Regular, sans-serif;
+    line-height: 19px;
+    color: #3ba5cf;
+}
+
+.footer,
+.footer div {
+    font-size: 12px;
+    font-family: Roboto-Rgular, sans-serif;
+    line-height: 23px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.no-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.news {}
+
+.news:before {
+    content: '';
+    width: 75px;
+    height: 6px;
+    background: #305777;
+    position: absolute;
+    top: -4px;
+    padding: 0px;
+    left: 0px;
+}
+
+.news:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    top: 0;
+    width: 6px;
+    height: 105px;
+    /* or 100px */
+    background: #305777;
+}
+
+.news>div {
+    padding: 20px;
+}
+
+.corner:before {
+    content: ' ';
+    width: 75px;
+    height: 6px;
+    background: #305777;
+    position: absolute;
+    padding: 0px;
+}
+
+.corner2:before {
+    content: " ";
+    position: absolute;
+    z-index: 100;
+    width: 6px;
+    height: 105px;
+    /* or 100px */
+    background: #305777;
+}
+
+.sectionp {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 10px
+}
+
+.section {
+    padding: 20px 100px 20px 100px;
+}
+
+.section-gray {
+    background-color: #f8f8f8;
+}
+
+.section-moregray {
+    background-color: #e1dfdf;
+}
+
+
+/* Navigation ******************************************************************/
+
+.navbar {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    padding-top: 0px;
+}
+
+.navbar-brand {
+    padding-top: 37px;
+    padding-left: 84px;
+}
+
+.navbar-nav {
+    padding-top: 37px;
+    padding-right: 76px;
+}
+
+.nav-item {
+    margin-right: 24px;
+}
+
+.text-light {
+    color: white;
+}
+
+.text-dark {
+    color: black;
+}
+
+.back-white {
+    background-color: white;
+}
+
+.back-dark {
+    background-color: #305777;
+}
+
+.back-transparent {
+    background-color: transparent;
+}
+
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+}
+
+
+/* Typical elements on page*/
+
+.First-After-Nav {
+    margin-top: 100px
+}
+
+.page-header {
+    padding-top: 70px;
+}
+
+
+/* Classes for Color Backgrounds *******************************************/
+
+.lightgray {
+    background-color: lightgray;
+}
+
+.header-small {
+    font-size: large;
+    font-weight: bold;
+}
+
+.project>h2 {
+    margin-top: 50px;
+}
+
+
+/* Classes for Project Lists*/
+
+.project-image {
+    width: 610px;
+    height: 350px;
+    margin-top: 50px;
+}
+
+.project-ontop {
+    z-index: 100;
+}
+
+.project-image-left {
+    margin-left: -200px
+}
+
+.project-text {
+    margin-top: 101px;
+    background-color: white;
+    padding: 50px;
+}
+
+.project-text-right {
+    margin-left: -120px;
+    margin-right: 100px;
+}
+
+.project-link {
+    margin-top: 30px;
+}
+
+.project-header {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.project-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.project-normal {
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+.arrow {
+    padding-left: 10px;
+}
+
+.arrow-flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+
+/* Page-specific *******************************************/
+
+.home {
+    padding-top: 0px;
+}
+
+.partner-logo {
+    height: 120px;
+    padding: 20px;
+}
+
+.news {
+    margin-top: 50px;
+}
+
+.mobileScreenShot {
+    max-width: 150px;
+    border: solid 1px gray;
+}

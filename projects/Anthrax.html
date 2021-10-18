@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CP.css" />
+    <title>Cell Podium</title>
+</head>
+
+<body onload="includeHTML();">
+    <div w3-include-html="../headerlight.html"></div>
+    <!--------------------------------  Main Content New ----------------------------------------------------------------------------------->
+    <div class="sectionp">
+        <div class="project-link">
+            <a class="button-link" href="projects.html">
+                <img class="arrow arrow-flip" src="/img/ArrowCopy.png" /> Back to all projects
+            </a>
+        </div>
+        <br />
+        <h4>Division of Strategic National Stockpile Anthrax Vaccination Campaign</h4><br /> The goal of this campaign was to evaluate the feasibility of guiding participants through their anthrax vaccination protocol via a campaign of SMS messages, and the
+        utility of the CMS in the deployment and monitoring of such a campaign. The vaccination protocol was developed by OPHPR, and Cell Podium extended the functionality of the CMS to support the vaccination campaign requirements, which differed from
+        previous OPHPR campaign requirements.
+
+        <br /><br />
+        <img src="../img/projects/Anthrax/Anthrax.jpg" style="max-width:100%" />
+
+        <br /><br /> A pilot vaccination campaign ran from June 16th to July 25th, during which time 26 participants involved in the design of the protocol enrolled. Each participant was able to specify 7am, 12pm, or 5pm as the preferred time when messages
+        were sent to her/him. The CMS transmitted to each participant the messages in the protocol (Figure 1) at the time specified by the protocol relative to the participant’s date of enrollment and preferred time of messaging. Cell Podium tracked the
+        progress of the campaign and submitted weekly reports and conference call updates with Dr. Amy Valderrama of OPHPR/DSNS and her associates at CDC and the Oak Ridge Associated Universities (ORAU).
+        <br /><br />
+        <img src="../img/projects/Anthrax/Graph1.png" style="max-width:100%" /><br />
+        <b>Figure 1. Accumulation of enrollments over time (total, and per broadcast time preference).</b>
+
+        <br /><br />
+        <b>Implementation</b><br /> The translation of the design of the vaccination protocol to the design of the campaign was straight-forward. All the major functionality of the campaign was accounted for in the design. Several issues in the design
+        of the protocol were addressed when the protocol was programmed into the CMS.
+        <ol>
+            <li>
+                The CMS had to respond instantly to the text message “info” or “help” sent by any participant without changing the participant’s position in the protocol (the original protocol specified the response as the second and third messages of the protocol, forcing
+                the sender back to the start of the protocol).
+            </li>
+            <li>
+                The protocol implied that two messages (#24 and #43), each serving as a point of convergence of two protocol paths, might have to be sent before the preceding message.
+            </li>
+            <li>
+                The campaign had to continue even if a participant did not answer questions. The CMS had to assume a default response after a specified waiting period, and correctly handle tardy responses submitted after the waiting period and differing from the default
+                response.
+            </li>
+        </ol>
+
+
+        During the pilot campaign, several issues arose due to human errors in the entry of data when the protocol was programmed into the CMS. First, several messages were scheduled to be sent at midnight instead of at the participant-selected time, and question
+        replies were sent two days late. Second, the keyword END (used to exit the campaign) was only bound to one of the three campaign times (5pm). A third issue arose from our message scheduling, wherein participants received duplicate messages (one
+        for the default/unanswered question, and one for the received answer). Each of these errors was addressed immediately upon their discovery, and mechanisms were put in place to prevent their recurrence in the future. The work plan of the SBIR Phase
+        II contract consists of one year (approximately FY2013) of CMS development, followed by one year of campaign deployments with which to exercise the CMS functionality and make any necessary refinements. The CMS developed in 2013 has a web-based
+        interface through which campaign administrators design, deploy, and assess their campaigns; this interface, on which CDC personnel were trained in February 2014, is designed to streamline the entry of linear campaigns (i.e., campaigns with a single
+        thread of message broadcasts). The multiple questions, default and explicit responses, and possible participant states of the anthrax vaccination protocol is much more complex and not linear. To ensure the reliable programming of such complex
+        campaigns, Cell Podium has re-developed its web-based visual interface so that the campaign administrator can clearly view complex campaigns.
+        <br /><br /><b>Analytics</b>
+        <br />The anthrax protocol SMS campaign pilot completed successfully. Apart from the issues mentioned above, all participants received their messages at the appropriate times, and the responses received were interpreted correctly. The CMS logs
+        all campaign activity, including incoming and outgoing messages. Analytics, derived from these logs, reveal salient participant behavior.
+        <br /><img src="../img/projects/Anthrax/Graph2.png" style="max-width:100%" />
+        <br /><b>Figure 3. Campaign message traffic (traffic per day).</b>
+        <br /><br /> Enrollment activity (Figure 3) indicates that more participants preferred to receive their messages at noon than at 7am or 5pm. Message traffic initially tracks the enrollment activity (6/16-20 in Figure 3). A lull in traffic starting
+        on 6/22 (resulting from the protocol relative to the dates of enrollment) concerned protocol developers that participants might be expecting to receive more messages. Consequently, a one-time reminder to participants that they are still enrolled
+        was sent on 6/26. The spike on 7/25 represents the mass-broadcast indicating the end of the campaign. Enrollment (Figure 3) and message traffic (Figure 4) are frequently collected mobile messaging analytics but these give little insight into how
+        participants advance through a complicated protocol. For this campaign, we created a new mobile messaging statistic: a heat map of message traffic per day of campaign as a function of protocol node (Figure 4). The heat map illustrates that participants
+        tended to cluster around protocol nodes containing questions, particularly 13, 19, and 38, indicating a delay in answering. The cluster starting at 6/30 represents participants moving out of node 19, while the cluster starting with 7/15 represents
+        participants moving out of node 38.
+        <br /><br />
+        <img src="../img/projects/Anthrax/Graph3.png" style="max-width:100%" /><br /> Figure 3. Campaign message traffic (traffic per day).
+        <br /><br />
+        <img src="../img/projects/Anthrax/Graph4.png" style="max-width:100%" /><br /> Figure 4. Percentage of unanswered questions, and average delay of answers, by campaign.
+        <br /><br />
+        <img src="../img/projects/Anthrax/Graph5.png" style="max-width:100%" />
+        <img src="../img/projects/Anthrax/Graph6.png" style="max-width:100%" />
+        <img src="../img/projects/Anthrax/Graph7.png" style="max-width:100%" /><br />
+        <b>Figure 5. Response times to questions asked of participants.</b>
+        <br /><br /> As previously indicated, when asked a question by the protocol (e.g., nodes 13, 19, and 38), participants were given 48 hours to reply. If a participant did not answer after 48 hours from having been asked a question, the CMS would
+        assume a default answer. The waiting period and default answer, both configurable in the CMS for each question, ensure that participants progress in a timely manner through the protocol. On average, campaign participants answered 53% of the protocol
+        questions they were asked, at an average of 66.5 minutes from receiving the question, and the CMS applied the default answer (after the timeout period) to the remaining 47% of questions asked. Participants receiving messages at 5pm were quicker
+        to respond to more questions that participants receiving messages at 7am or noon (Figure 4, Figure 5). The protocol has three endpoints:
+        <ul>
+            <li>node 23 through which five participants exited the protocol because they had not received their second anthrax vaccine,</li>
+            <li>node 42 through which nine participants exited the protocol because they had not received their last anthrax vaccine,</li>
+            <li>nodes 53 and 54 through which seven participants exited the protocol because they completed it having recently experienced throat closing, trouble breathing, or swelling of tongue, face or mouth, and</li>
+            <li>node 51 through which five participants completed the protocol without having recently experienced the aforementioned symptoms.</li>
+        </ul>
+    </div>
+
+    <div w3-include-html="../footer.html"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../cp.js"></script>
+</body>
+
+</html>
