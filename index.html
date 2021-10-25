@@ -10,34 +10,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/CP.css" />
     <title>Cell Podium</title>
+
 </head>
 
-<body onload="includeHTML();">
-    <div w3-include-html="headerdark.html"></div>
-    <!-- <img src="img/bg-dark.png" alt="background" style="max-width:100%" /> -->
-    <div class="sectionp" style="background-image: url('img/bg-dark.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-color:#284964;
-        color:white;
-        margin-top:-85px;
-        padding-left:20px">
-        <div style="height:120px"></div>
-        <h1>
-            Cell Podium is an award-winning digital solutions provider, dedicated to developing products for emergency situations and safety.
+<body id="body">
+    <div id="headernav" w3-include-html="headerdark.html" style="position:relative;z-index:200"></div>
+
+    <div class="sectionp" style="position:relative;background-color:#172B3B">
+        <div style="position:absolute;z-index:3;width:100%;height:50px;">
+            <img id="imgbg" src="/img/bg-dark.png" alt="background" style="position:absolute;top:-90px;left:-10px;max-width:100%" />
+        </div>
+
+        <h1 style="color:white;position:relative;z-index:5;">
+
+            <div style="padding-left:10px;padding-top:30px">
+                Cell Podium is an award-winning digital solutions provider, dedicated to developing products for emergency situations and safety.
+            </div>
         </h1>
-        <div class="row " style="color:white;padding:80px 100px 100px 0px">
+        <div class="row " style="color:white;padding-left:10px;padding-right:10px;padding-top:50px;position:relative;z-index:5">
             <div class="col-lg-4 col-md-4">
                 <h3>Projects</h3><br /> Hazmat Augmentation Reality Solution<br /> Multimedia Messaging for Emergency<br /> Occupational Safety Training <br><br>
             </div>
             <div class="col-lg-4 col-md-4">
-                <h3>Services</h3><br /> Augmented Reality Emergency Through Beacons<br /> Multimedia Messaging Campaigns<br /> Multimedia Conent Authoring<br />
+                <h3>Services</h3><br /> Augmented Reality Emergency Through Beacons<br /> Multimedia Messaging Campaigns<br /> Multimedia Conent Authoring<br /><br>
             </div>
         </div>
     </div>
+    <div id="imgspacer" style="height:150px"></div>
+    <!--------------------------------  Large Scale Hazmat Simulator ----------------------------------------------------------------------------------->
+    <div class="row sectionp">
+        <div class="col-md-6">
+            <div>
+                <h2 style="text-decoration:underline">Large Scale Hazmart Sensor Simulator</h2>
+                CellPodium was arward a phase 1 SBIR grant (1R43OH012129-01) to develop a hazmart sensor simulator that can realistically reflect large scale hazard spills.
+                The simulator is based on GPS, very easy to use with no training required.
+                It is inexpesnive and is purely based on the mobile browser available in any handheld.
+                <div class="project-link">
+                    <a class="button-link" href="projects/large-scale.html">
+                        View Case Study
+                        <img class="arrow" src="img/ArrowCopy.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="img/largescale/map.png" style="max-width:100%;-o-object-fit: contain;object-fit: contain;vertical-align:top !important" />
+        </div>
+    </div>
+    <br>
+    <!--------------------------------  Covid 19 LMS ----------------------------------------------------------------------------------->
+    <div class="row sectionp">
+        <div class="col-md-6">
+            <div>
+                <h2 style="text-decoration:underline">COVID-19 Awareness Training</h2>
+                Based on technology developed by Cell Podium for the National Institute of Environmental Health Sciences (NIEHS) Worker Training Program (WTP) under the Small Business Innovation Research (SBIR) Program, Cell Podium developed and deployed a learning management system (LMS) for mobile refresher training.
+
+                <div class="project-link">
+                    <a class="button-link" href="/projects/covid19lms.html">
+                        View Case Study
+                        <img class="arrow" src="img/ArrowCopy.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="img/covid19/mobile1.png" style="max-width:100%;-o-object-fit: contain;object-fit: contain;vertical-align:top !important" />
+        </div>
+    </div>
+    <br>
 
     <!--------------------------------  Hazmat AR Solution ----------------------------------------------------------------------------------->
-    <br><br>
     <div class="section-gray sectionp">
         <div class="row">
             <div class="col-md-6">
@@ -46,13 +88,16 @@
             <div class="col-md-6">
                 <div>
                     <h2 style="text-decoration:underline">Hazmat AR Solution</h2>
-                    Rutgers School of Public Health saw a need to improve their training on hazardous materials (Explosive, Radiation, Oxygen depletion, etc) to include outside life simulations of hazardous incidents. They approached S&A Technologies to team up and develop
-                    a smartphone based sensor simulation. Together they received a grant from NIEHS to develop a prototype for this application.
+                    Rutgers School of Public Health saw a need to improve their training on hazardous materials
+                    (Explosive, Radiation, Oxygen depletion, etc) to include outside life simulations of hazardous incidents.
+                    They approached S&A Technologies to team up and develop
+                    a smartphone based sensor simulation.
+                    Together they received a grant from NIEHS to develop a prototype for this application.
                     <div class="project-link">
                         <a class="button-link" href="/projects/project-hazmat.shtml">
-                                View Case Study
-                                <img class="arrow" src="img/ArrowCopy.png" />
-                            </a>
+                            View Case Study
+                            <img class="arrow" src="img/ArrowCopy.png" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -67,10 +112,10 @@
                 CellPodium developed a system to rapidly and cost-effectively deploy impactful m-health and m-learning campaigns anywhere in the world, using Cellular Multimedia System (CMS). This technology was used in the aftermath of Hurricane Sandy, when Cell Podium
                 used the CMS to broadcast logistics videos with mobilization instructions to the cell phones of RDF-3 personnel and helped coordinate response operations.
                 <div class="project-link">
-                    <a class="button-link" href="projects/RapidDeployment.shtml">
-                            View Case Study
-                            <img class="arrow" src="img/ArrowCopy.png" />
-                        </a>
+                    <a class="button-link" href="projects/RapidDeployment.html">
+                        View Case Study
+                        <img class="arrow" src="img/ArrowCopy.png" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -78,6 +123,7 @@
             <img src="img/Jitteis.png" style="max-width:100%;-o-object-fit: contain;object-fit: contain;vertical-align:top !important" />
         </div>
     </div>
+    <br>
 
     <!--------------------------------  Demobilization tips for CDC RDF-3 team ----------------------------------------------------------------------------------->
     <div class="section-gray sectionp" style="padding-top:20px;padding-bottom:20px">
@@ -102,10 +148,24 @@
         </div>
 
     </div>
-    <div w3-include-html="footer.html"></div>
+
+    <div class="sectionp" w3-include-html="footer.html" style="color:black"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="cp.js"></script>
+    <script>
+        window.onload = function () {
+            includeHTML();
+        }
+
+
+        window.onscroll = function (e) {
+            y = - Math.floor(window.scrollY / 2);
+            const imgbg = document.getElementById("imgbg");
+            let top = parseInt(imgbg.style['top']);
+            imgbg.style.top = (y - 90) + 'px';
+        }
+    </script>
 </body>
 
 </html>
